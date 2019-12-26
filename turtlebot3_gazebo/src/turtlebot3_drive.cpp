@@ -87,8 +87,8 @@ void Turtlebot3Drive::updatecommandVelocity(double linear, double angular)
 {
   geometry_msgs::Twist cmd_vel;
 
-  cmd_vel.linear.x  = linear;
-  cmd_vel.angular.z = angular;
+  cmd_vel.linear.x = linear;
+  cmd_vel.linear.y = angular;
 
   cmd_vel_pub_.publish(cmd_vel);
 }
