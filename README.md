@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TurtleBot3
 <img src="https://github.com/ROBOTIS-GIT/emanual/blob/master/assets/images/platform/turtlebot3/logo_turtlebot3.png" width="300">
 
@@ -49,3 +50,6 @@
 - [Website for TurtleBot Series](http://www.turtlebot.com/)
 - [e-Book for TurtleBot3](https://community.robotsource.org/t/download-the-ros-robot-programming-book-for-free/51/)
 - [Videos for TurtleBot3 ](https://www.youtube.com/playlist?list=PLRG6WP3c31_XI3wlvHlx2Mp8BYqgqDURU)
+=======
+Start this repo by creating a README file.
+>>>>>>> 49c9ccbe7fef269bd9d1475043abd075adf5da48
