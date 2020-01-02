@@ -33,7 +33,7 @@
 
     <include>
       <uri>model://icra_field</uri>
-      <pose>0 0 0 1.57 0 0</pose>
+      <pose>4.05 2.55 0 1.57 0 0</pose>
     </include>
 
     <!--<scene>
