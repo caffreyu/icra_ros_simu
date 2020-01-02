@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<robot name="summit_xl" xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <gazebo reference="summit_base_footprint">
+    <material>Gazebo/DarkGrey</material>
+  </gazebo>
+
+  <gazebo reference="summit_back_left_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="summit_back_right_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo reference="summit_front_right_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+  
+  <gazebo reference="summit_front_right_wheel_link">
+    <material>Gazebo/FlatBlack</material>
+  </gazebo>
+
+  <gazebo>
+    <plugin name="summit_xl_controller" filename="libgazebo_ros_diff_drive.so">
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometrySource>world</odometrySource>
+      <publishOdomTF>true</publishOdomTF>
+      <robotBaseFrame>summit_base_footprint</robotBaseFrame>
+      <publishWheelTF>false</publishWheelTF>
+      <publishTf>true</publishTf>
+      <publishWheelJointState>true</publishWheelJointState>
+      <legacyMode>false</legacyMode>
+      <updateRate>30</updateRate>
+      <rosDebugLevel>na</rosDebugLevel>
+    </plugin> <!-- Add wheel seperation here. Take turtlebot3 as an instance -->
+
+    <plugin name="p3d_base_controller" filename="libgazebo_ros_p3d.so">
+      <alwaysOn>true</alwaysOn>
+      <updateRate>50.0</updateRate>
+      <bodyName>summit_base_footprint</bodyName>
+      <topicName>ground_truth/state</topicName>
+      <gaussianNoise>0.01</gaussianNoise>
+      <frameName>world</frameName>
+      <xyzOffsets>0 0 0</xyzOffsets>
+      <rpyOffsets>0 0 0</rpyOffsets>
+    </plugin>
+  </gazebo>
+
+</robot>
