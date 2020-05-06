@@ -1,2 +1,2 @@
-# icra_ros_simu
-This repo is for modifying simulator of turtlebot3 for learning and preparing for the 2020 ICRA Competition. 
+# ME 5463 Final Project
+This repo is for the ME 5463 final project. 
